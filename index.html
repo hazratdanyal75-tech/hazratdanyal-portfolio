@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hazrat Danyal | Professional Graphic Designer & Web Developer</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5e9',
+            secondary: '#6366f1',
+            darkbg: '#070b14',
+            darkcard: '#0f172a'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #070b14; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #0ea5e9; }
+    .gradient-text {
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-darkbg dark:text-slate-100 transition-colors duration-300 font-sans">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-darkbg/80 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#home" class="text-2xl font-extrabold tracking-tight">
+        Hazrat <span class="gradient-text">Danyal</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium">
+        <a href="#home" class="hover:text-sky-400 transition">Home</a>
+        <a href="#about" class="hover:text-sky-400 transition">About</a>
+        <a href="#services" class="hover:text-sky-400 transition">Services</a>
+        <a href="#portfolio" class="hover:text-sky-400 transition">Portfolio</a>
+        <a href="#packages" class="hover:text-sky-400 transition">Packages</a>
+        <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <button id="themeToggle" aria-label="Toggle Theme" class="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition">
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-amber-400"></i>
+          <i data-lucide="moon" class="w-5 h-5 block dark:hidden text-slate-700"></i>
+        </button>
+
+        <a href="https://wa.me/923439658505?text=Hi%20Hazrat%20Danyal,%20I%20visited%20your%20portfolio%20and%20want%20to%20hire%20you!" target="_blank"
+           class="hidden sm:inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-lg shadow-emerald-500/20 transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Hire Me
+        </a>
+
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl bg-slate-200 dark:bg-slate-800">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-darkbg">
+      <a href="#home" class="block py-2 hover:text-sky-400">Home</a>
+      <a href="#about" class="block py-2 hover:text-sky-400">About</a>
+      <a href="#services" class="block py-2 hover:text-sky-400">Services</a>
+      <a href="#portfolio" class="block py-2 hover:text-sky-400">Portfolio</a>
+      <a href="#packages" class="block py-2 hover:text-sky-400">Packages</a>
+      <a href="#contact" class="block py-2 hover:text-sky-400">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section with Two Pictures Side-by-Side -->
+  <section id="home" class="py-16 md:py-24 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      
+      <!-- Dono Pictures ka Container (Side-by-Side) -->
+      <div class="flex flex-wrap items-center justify-center gap-6 mb-8">
+        <!-- Picture 1: profile.jpg -->
+        <div class="relative w-32 h-32 sm:w-36 sm:h-36 group">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 blur-md opacity-70 group-hover:opacity-100 transition"></div>
+          <img src="profile.jpg" alt="Hazrat Danyal Profile" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'" 
+               class="relative w-full h-full object-cover rounded-full border-4 border-slate-900 shadow-2xl" />
+        </div>
+
+        <!-- Picture 2: workspace.jpg -->
+        <div class="relative w-32 h-32 sm:w-36 sm:h-36 group">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600 blur-md opacity-70 group-hover:opacity-100 transition"></div>
+          <img src="workspace.jpg" alt="Hazrat Danyal Workspace" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80'" 
+               class="relative w-full h-full object-cover rounded-full border-4 border-slate-900 shadow-2xl" />
+        </div>
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+        Available for Freelance Projects & Remote Work
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+        Hi, I'm <span class="gradient-text">Hazrat Danyal</span> <br/>
+        Graphic Designer & Web Developer
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-base sm:text-lg mb-8">
+        Turning bold ideas into scroll-stopping graphic designs, high-retention video edits, and modern responsive web experiences.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#portfolio" class="px-6 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-semibold shadow-lg shadow-sky-500/25 transition flex items-center gap-2">
+          <i data-lucide="layers" class="w-5 h-5"></i> Explore My Work
+        </a>
+        <a href="https://wa.me/923439658505?text=Hi%20Hazrat%20Danyal,%20I%20want%20to%20discuss%20a%20project!" target="_blank"
+           class="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg shadow-emerald-500/25 transition flex items-center gap-2">
+          <i data-lucide="phone-call" class="w-5 h-5"></i> Chat on WhatsApp
+        </a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-3 gap-4 max-w-2xl mx-auto mt-14 pt-8 border-t border-slate-200 dark:border-slate-800">
+        <div>
+          <p class="text-2xl sm:text-3xl font-bold text-sky-400">50+</p>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Projects Completed</p>
+        </div>
+        <div>
+          <p class="text-2xl sm:text-3xl font-bold text-indigo-400">100%</p>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Client Satisfaction</p>
+        </div>
+        <div>
+          <p class="text-2xl sm:text-3xl font-bold text-emerald-400">24h</p>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400">Quick Turnaround</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-16 px-4 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3">About <span class="gradient-text">Me</span></h2>
+        <p class="text-slate-600 dark:text-slate-400">Get to know the person behind the screen.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p>
+            I am <strong class="text-slate-900 dark:text-white">Hazrat Danyal</strong>, a passionate digital creator, graphic designer, and computer science student. I specialize in building stunning promotional graphics, branding kits, and clean web applications.
+          </p>
+          <p>
+            Whether you need eye-catching social media posters for Instagram and Fiverr, viral short-form video edits, or a fully responsive portfolio website, I combine creativity with technical precision to deliver outstanding results.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-lg bg-sky-500/10 text-sky-400 text-xs font-semibold">Graphic Design</span>
+            <span class="px-3 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 text-xs font-semibold">Video Editing</span>
+            <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 text-xs font-semibold">Web Development</span>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-darkcard p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
+          <h3 class="font-bold text-lg mb-2">Tools & Technologies</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1"><span>Adobe Photoshop & Illustrator</span><span>95%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-sky-500 h-full w-[95%]"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1"><span>CapCut & Video Editing</span><span>90%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-indigo-500 h-full w-[90%]"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1"><span>HTML5, Tailwind CSS, JavaScript</span><span>85%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[85%]"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1"><span>C++ & Programming Logic</span><span>80%</span></div>
+              <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-purple-500 h-full w-[80%]"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3">My Professional <span class="gradient-text">Services</span></h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Tailored digital solutions to elevate your brand presence.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 hover:border-sky-500 transition group">
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+            <i data-lucide="palette" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Graphic & Poster Design</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Promotional posters, banners, YouTube thumbnails, and social media ads.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition group">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+            <i data-lucide="pen-tool" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Brand Identity & Logos</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Unique, memorable logos, business cards, and complete brand guidelines.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 hover:border-pink-500 transition group">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+            <i data-lucide="video" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Short-Form Video Editing</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Engaging Reels, TikToks, and YouTube Shorts with animated subtitles.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+            <i data-lucide="code-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Web Development</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Fast, responsive portfolio and business landing page websites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-16 px-4 bg-slate-100/70 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold mb-3">Featured <span class="gradient-text">Portfolio</span></h2>
+        <p class="text-slate-600 dark:text-slate-400">Filter through my recent works and projects.</p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-2 mb-10" id="filterButtons">
+        <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-sm font-semibold bg-sky-500 text-white transition">All Works</button>
+        <button data-filter="design" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-slate-200 dark:bg-slate-800 hover:bg-sky-500 hover:text-white transition">Posters & Branding</button>
+        <button data-filter="video" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-slate-200 dark:bg-slate-800 hover:bg-sky-500 hover:text-white transition">Video Edits</button>
+        <button data-filter="web" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-slate-200 dark:bg-slate-800 hover:bg-sky-500 hover:text-white transition">Websites</button>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid">
+        <div class="portfolio-item group rounded-2xl overflow-hidden bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm" data-category="design">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Brand Poster" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button onclick="openModal('Promotional Brand Poster', 'Posters & Branding', 'High-contrast promotional social media graphic designed for maximum client reach.', 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80')"
+                      class="px-4 py-2 bg-sky-500 text-white text-sm font-semibold rounded-xl">View Details</button>
+            </div>
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-semibold text-sky-400">Posters & Branding</span>
+            <h3 class="text-lg font-bold mt-1">Promotional Brand Poster</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item group rounded-2xl overflow-hidden bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm" data-category="web">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80" alt="Landing Page" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button onclick="openModal('Business Landing Page', 'Websites', 'Responsive Tailwind business website optimized for lead generation and fast load times.', 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80')"
+                      class="px-4 py-2 bg-sky-500 text-white text-sm font-semibold rounded-xl">View Details</button>
+            </div>
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-semibold text-emerald-400">Websites</span>
+            <h3 class="text-lg font-bold mt-1">Modern Business Landing Page</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item group rounded-2xl overflow-hidden bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 shadow-sm" data-category="video">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Video Edit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button onclick="openModal('Viral Short-Form Video', 'Video Edits', 'Dynamic CapCut edit featuring sound design, color grading, and animated captions.', 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80')"
+                      class="px-4 py-2 bg-sky-500 text-white text-sm font-semibold rounded-xl">View Details</button>
+            </div>
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-semibold text-pink-400">Video Edits</span>
+            <h3 class="text-lg font-bold mt-1">Viral Short-Form Video Edit</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Section -->
+  <section id="packages" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3">Starter <span class="gradient-text">Packages</span></h2>
+        <p class="text-slate-600 dark:text-slate-400">Transparent pricing for your next project.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 flex flex-col justify-between shadow-sm">
+          <div>
+            <h3 class="text-xl font-bold mb-2">Basic Starter</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Great for quick graphic designs or single video edits.</p>
+            <ul class="space-y-3 text-sm mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 2 Custom Posters / Thumbnails</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> High-Resolution Files</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 24-Hour Delivery</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 2 Free Revisions</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/923439658505?text=Hi%20Hazrat%20Danyal,%20I%20want%20to%20book%20the%20Basic%20Package!" target="_blank"
+             class="w-full py-3 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-sky-500 hover:text-white text-center font-semibold transition">Book Basic</a>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white dark:bg-darkcard border-2 border-sky-500 relative flex flex-col justify-between shadow-xl shadow-sky-500/10">
+          <span class="absolute -top-3.5 right-6 bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Brand Growth</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Ideal for active creators and growing businesses.</p>
+            <ul class="space-y-3 text-sm mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400"></i> Logo + 5 Social Media Posts</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400"></i> 3 Edited Reels / Shorts</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400"></i> Source Files Included</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400"></i> Unlimited Revisions</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/923439658505?text=Hi%20Hazrat%20Danyal,%20I%20want%20to%20book%20the%20Brand%20Growth%20Package!" target="_blank"
+             class="w-full py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-center font-semibold transition">Book Standard</a>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white dark:bg-darkcard border border-slate-200 dark:border-slate-800 flex flex-col justify-between shadow-sm">
+          <div>
+            <h3 class="text-xl font-bold mb-2">Complete Digital Setup</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Full brand identity plus live website.</p>
+            <ul class="space-y-3 text-sm mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Custom Portfolio Website</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Complete Branding Kit</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> WhatsApp & Hosting Setup</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Priority Support</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/923439658505?text=Hi%20Hazrat%20Danyal,%20I%20want%20to%20book%20the%20Complete%20Setup%20Package!" target="_blank"
+             class="w-full py-3 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-sky-500 hover:text-white text-center font-semibold transition">Book Premium</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-4 bg-slate-100/70 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold mb-3">Let's Work <span class="gradient-text">Together</span></h2>
+        <p class="text-slate-600 dark:text-slate-400">Send me a direct message via WhatsApp or fill out the form below.</p>
+      </div>
+
+      <div class="grid md:grid-cols-5 gap-8 bg-white dark:bg-darkcard p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="md:col-span-2 flex flex-col justify-between space-y-6">
+          <div>
+            <h3 class="text-xl font-bold mb-2">Direct Contact</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Fastest response guaranteed on WhatsApp.</p>
+
+            <a href="https://wa.me/923439658505?text=Hi%20Hazrat%20Danyal,%20I%20have%20a%20project%20for%20you!" target="_blank"
+               class="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-lg shadow-emerald-500/20 transition mb-4">
+              <i data-lucide="message-circle" class="w-5 h-5"></i> Chat on WhatsApp
+            </a>
+
+            <div class="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-sky-400"></i> +92 343 9658505
+            </div>
+          </div>
+
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Find Me On</p>
+            <div class="flex flex-wrap gap-2">
+              <a href="https://www.fiverr.com/" target="_blank" class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:text-emerald-400 text-xs font-semibold transition">Fiverr</a>
+              <a href="https://www.upwork.com/" target="_blank" class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:text-emerald-400 text-xs font-semibold transition">Upwork</a>
+              <a href="https://www.instagram.com/" target="_blank" class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:text-pink-400 text-xs font-semibold transition">Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm" class="md:col-span-3 space-y-4">
+          <div>
+            <label class="block text-xs font-semibold mb-1">Your Name</label>
+            <input type="text" id="clientName" required placeholder="Enter your name"
+                   class="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 focus:outline-none focus:border-sky-500 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1">Service Needed</label>
+            <select id="clientService" class="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 focus:outline-none focus:border-sky-500 text-sm">
+              <option value="Graphic & Poster Design">Graphic & Poster Design</option>
+              <option value="Logo & Brand Identity">Logo & Brand Identity</option>
+              <option value="Short-Form Video Editing">Short-Form Video Editing</option>
+              <option value="Portfolio / Business Website">Portfolio / Business Website</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1">Project Details</label>
+            <textarea id="clientMsg" rows="3" required placeholder="Tell me briefly about your project..."
+                      class="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 focus:outline-none focus:border-sky-500 text-sm"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-semibold transition flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i> Send via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-4 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
+    <p>&copy; 2026 <strong class="text-slate-800 dark:text-slate-200">Hazrat Danyal</strong>. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-darkcard max-w-lg w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-2xl">
+      <img id="modalImg" src="" alt="Preview" class="w-full h-60 object-cover" />
+      <div class="p-6">
+        <span id="modalCat" class="text-xs font-semibold text-sky-400"></span>
+        <h3 id="modalTitle" class="text-xl font-bold mt-1 mb-2"></h3>
+        <p id="modalDesc" class="text-sm text-slate-600 dark:text-slate-400 mb-6"></p>
+        <div class="flex justify-end gap-3">
+          <button onclick="closeModal()" class="px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-sm font-semibold">Close</button>
+          <a href="https://wa.me/923439658505?text=Hi%20Hazrat%20Danyal,%20I%20liked%20your%20work%20and%20want%20something%20similar!" target="_blank"
+             class="px-4 py-2 rounded-xl bg-emerald-500 text-white text-sm font-semibold">Order Similar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    lucide.createIcons();
+
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+    themeToggle.addEventListener('click', () => { htmlEl.classList.toggle('dark'); });
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => { b.classList.remove('bg-sky-500', 'text-white'); b.classList.add('bg-slate-200', 'dark:bg-slate-800'); });
+        btn.classList.add('bg-sky-500', 'text-white'); btn.classList.remove('bg-slate-200', 'dark:bg-slate-800');
+        const filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    function openModal(title, category, desc, imgSrc) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalCat').innerText = category;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modalImg').src = imgSrc;
+      document.getElementById('projectModal').classList.remove('hidden');
+    }
+    function closeModal() { document.getElementById('projectModal').classList.add('hidden'); }
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('clientName').value;
+      const service = document.getElementById('clientService').value;
+      const msg = document.getElementById('clientMsg').value;
+      const text = `Hi Hazrat Danyal!%0A*Name:* ${encodeURIComponent(name)}%0A*Service:* ${encodeURIComponent(service)}%0A*Details:* ${encodeURIComponent(msg)}`;
+      window.open(`https://wa.me/923439658505?text=${text}`, '_blank');
+    });
+  </script>
+</body>
+</html>
